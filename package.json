@@ -1,0 +1,27 @@
+{
+  "name": "sweet-email-template-gen",
+  "version": "1.0.0",
+  "description": "Sweet automation to generate emails generig HTML email templates",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "email",
+    "template",
+    "email-template",
+    "pardot"
+  ],
+  "author": "Thiago Higuchi <thiago.higuchi@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp-rename": "^2.0.0",
+    "gulp-strip-comments": "^2.5.2",
+    "gulp-strip-css-comments": "^2.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-nunjucks-render": "^2.2.3"
+  }
+}

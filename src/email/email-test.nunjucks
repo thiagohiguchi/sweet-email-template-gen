@@ -1,0 +1,92 @@
+{# {% set backgroundColor = "#f1f1f1" %} #}
+{% set maxWidth = "620" %}
+
+{% extends "../templates/base.html" %}
+
+{% block headCode %}
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700;800&display=swap" rel="stylesheet">
+
+{% endblock %}
+
+{% block inlineCss %}
+
+    h1, h2, h3, h4, h5, h6, a, p { font-family: 'Open Sans', arial, sans-serif; } 
+    
+    p {
+      font-size: 1.0625rem;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.59;
+        letter-spacing: 0.07px;
+    }
+    
+    body { background:#f1f1f1; }
+
+    #backgroundTable { margin: 30px 0; } 
+
+    #backgroundTable table td { padding: 0 40px; } 
+    
+    .center {
+        margin:auto;
+        text-align:center;
+    }
+
+    .backgroundWhite {
+        background-color: #fff;
+    }
+
+{% endblock %}
+
+{% block inlineCssMaxW480 %}
+
+    #backgroundTable td { padding: 0 3%; } 
+
+        #backgroundTable table td { padding: 0 4%; } 
+
+        p {
+      font-size: 0.9625rem;
+        line-height: 1.2;
+    }
+    
+
+
+{% endblock %}
+
+{% block inlineCssMaxW467 %}
+
+    #backgroundTable td { padding: 0 5%; } 
+
+        #backgroundTable table td { padding: 0 6%; } 
+
+
+{% endblock %}
+
+{% block contentTable %}
+
+    <tr>
+        <td width="{{ maxWidth }}" valign="top">
+            <img class="image_fix center" src="/assets/logo.png" alt="Company Logo" title="Company Logo" width="150" height="142"/>
+        </td>
+    </tr>
+
+    <tr class="backgroundWhite">
+        <td width="{{ maxWidth }}" valign="top">
+            <h2>oioioi oi oi io</h2>
+        </td>
+    </tr>
+
+    <tr class="backgroundWhite">
+        <td width="{{ maxWidth }}" valign="top">
+            <p>Elit ex qui quis elit amet aute sit commodo. Elit ex qui quis elit amet aute sit commodo Elit ex qui quis elit amet aute sit commodo.</p>
+        </td>
+    </tr>
+
+    <tr class="backgroundWhite">
+        <td width="{{ maxWidth }}" valign="top">
+        <p class="center">Ex est ea ad velit veniam est ea ad velit veniam.<br><a href="#">Update email preferences</a></p>
+        </td>
+    </tr>
+
+{% endblock %}
