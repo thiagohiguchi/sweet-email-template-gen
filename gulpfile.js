@@ -9,6 +9,8 @@ const browser = require('browser-sync').create();
 const rename = require('gulp-rename');
 const strip = require('gulp-strip-comments');
 const stripCssComments = require('gulp-strip-css-comments');
+const inlineCss = require('gulp-inline-css');
+
 
 
 function doThatGoodStuff(path) {
@@ -30,6 +32,12 @@ function doThatGoodStuff(path) {
             safe: "<!--[if"
         }))
         .pipe(stripCssComments())
+        .pipe(inlineCss({
+            // applyStyleTags: true,
+            // applyLinkTags: true,
+            removeStyleTags: false,
+            // removeLinkTags: true
+    }))
         .pipe(dest('./dist/'));
 }
 
@@ -64,4 +72,3 @@ function build(done) {
 
 exports.build = build;
 exports.default = series(build, startServer, watchTemplate);
-// exports.default = series(build, watchTemplate);
